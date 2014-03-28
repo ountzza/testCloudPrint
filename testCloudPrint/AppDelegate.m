@@ -14,13 +14,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    [[NXOAuth2AccountStore sharedStore] setClientID:@"xXxXxXxXxXxX"
-                                             secret:@"xXxXxXxXxXxX"
-                                   authorizationURL:[NSURL URLWithString:@"https://...your auth URL..."]
-                                           tokenURL:[NSURL URLWithString:@"https://...your token URL..."]
-                                        redirectURL:[NSURL URLWithString:@"https://...your redirect URL..."]
-                                     forAccountType:@"myFancyService"];
+    [[NXOAuth2AccountStore sharedStore] setClientID:@"856600324052-ifcft9ksf0ufg9c88nt45g5c1tg8vi3j.apps.googleusercontent.com"
+                                             secret:@"GVarvvECSMsFSFugUBOttURZ"
+                                   authorizationURL:[NSURL URLWithString:@"https://accounts.google.com/o/oauth2/auth"]
+                                           tokenURL:[NSURL URLWithString:@"https://accounts.google.com/o/oauth2/token"]
+                                        redirectURL:[NSURL URLWithString:@"http://localhost"]
+                                     forAccountType:@"googleClientAuthService"];
     return YES;
 }
 							
