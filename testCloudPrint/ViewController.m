@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "NXOAuth2.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //in order to login to Google APIs using OAuth2 we must show an embedded browser (UIWebView)
+    [[NXOAuth2AccountStore sharedStore] requestAccessToAccountWithType:@"googleClientAuthService"
+                                   withPreparedAuthorizationURLHandler:^(NSURL *preparedURL){
+                                       
+                                       //navigate to the URL returned by NXOAuth2Client
+                                       [self.WebView loadRequest:[NSURLRequest requestWithURL:preparedURL]];
+                                   }];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

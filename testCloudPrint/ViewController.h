@@ -10,5 +10,6 @@
 
 @interface ViewController : UIViewController
 - (IBAction)testButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIWebView *WebView;
 
 @end

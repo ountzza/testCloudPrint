@@ -14,12 +14,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[NXOAuth2AccountStore sharedStore] setClientID:@"856600324052-ifcft9ksf0ufg9c88nt45g5c1tg8vi3j.apps.googleusercontent.com"
-                                             secret:@"GVarvvECSMsFSFugUBOttURZ"
+    [[NXOAuth2AccountStore sharedStore] setClientID:@"808528885177-joht12lu4762v7d62ff9dmrm478lia8j.apps.googleusercontent.com"
+                                             secret:@"AUOSoqLhIl-kZuLD2KokYT-_"
+                                              scope:[NSSet setWithObject:@"https://www.googleapis.com/auth/userinfo.profile"]
                                    authorizationURL:[NSURL URLWithString:@"https://accounts.google.com/o/oauth2/auth"]
                                            tokenURL:[NSURL URLWithString:@"https://accounts.google.com/o/oauth2/token"]
-                                        redirectURL:[NSURL URLWithString:@"http://localhost"]
+                                        redirectURL:[NSURL URLWithString:@"urn:ietf:wg:oauth:2.0:oob"]
                                      forAccountType:@"googleClientAuthService"];
+
+
+    
     return YES;
 }
 							
