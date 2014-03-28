@@ -7,12 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "NXOAuth2.h"
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[NXOAuth2AccountStore sharedStore] setClientID:@"xXxXxXxXxXxX"
+                                             secret:@"xXxXxXxXxXxX"
+                                   authorizationURL:[NSURL URLWithString:@"https://...your auth URL..."]
+                                           tokenURL:[NSURL URLWithString:@"https://...your token URL..."]
+                                        redirectURL:[NSURL URLWithString:@"https://...your redirect URL..."]
+                                     forAccountType:@"myFancyService"];
     return YES;
 }
 							
