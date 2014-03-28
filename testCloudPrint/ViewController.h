@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIWebViewDelegate>
 - (IBAction)testButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIWebView *WebView;
+@property (weak, nonatomic) IBOutlet NSString *absoluteString;
 
 @end
